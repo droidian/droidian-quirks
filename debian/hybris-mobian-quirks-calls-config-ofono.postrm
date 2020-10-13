@@ -1,0 +1,17 @@
+#!/bin/sh
+set -e
+
+remove() {
+
+	# Restore Calls daemon config
+	if [ -e "/etc/xdg/default/sm.puri.Calls.desktop" ]; then
+		rm -f "/etc/xdg/default/sm.puri.Calls.desktop"
+		dpkg-divert --rename --package meta-base --divert "/usr/lib/calls-config-ofono/sm.puri.Calls.desktop.mm" --remove "/etc/xdg/default/sm.puri.Calls.desktop"
+	fi
+}
+
+case "$1" in
+	"remove")
+		remove
+		;;
+esac
