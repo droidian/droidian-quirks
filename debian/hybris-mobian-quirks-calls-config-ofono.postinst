@@ -4,7 +4,7 @@ set -e
 configure() {
 	# Divert Calls daemon config
 	if ! [ -e "/etc/xdg/default/sm.puri.Calls.desktop" ]; then
-		dpkg-divert --rename --package meta-base --divert "/usr/lib/calls-config-ofono/sm.puri.Calls.desktop.mm" --add "/etc/xdg/default/sm.puri.Calls.desktop"
+		dpkg-divert --rename --package hybris-mobian-quirks-calls-config-ofono --divert "/usr/lib/calls-config-ofono/sm.puri.Calls.desktop.mm" --add "/etc/xdg/default/sm.puri.Calls.desktop"
 		ln -s "/usr/lib/calls-config-ofono/sm.puri.Calls.desktop.ofono" "/etc/xdg/default/sm.puri.Calls.desktop"
 	fi
 
