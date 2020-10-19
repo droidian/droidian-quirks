@@ -4,9 +4,9 @@ set -e
 remove() {
 
 	# Restore Calls daemon config
-	if [ -e "/etc/xdg/default/sm.puri.Calls.desktop" ]; then
-		rm -f "/etc/xdg/default/sm.puri.Calls.desktop"
-		dpkg-divert --rename --package hybris-mobian-quirks-calls-config-ofono --divert "/usr/lib/calls-config-ofono/sm.puri.Calls.desktop.mm" --remove "/etc/xdg/default/sm.puri.Calls.desktop"
+	if [ -e "/usr/lib/calls-config-ofono/sm.puri.Calls.desktop.mm" ]; then
+		rm -f "/etc/xdg/autostart/sm.puri.Calls.desktop"
+		dpkg-divert --rename --package hybris-mobian-quirks-calls-config-ofono --divert "/usr/lib/calls-config-ofono/sm.puri.Calls.desktop.mm" --remove "/etc/xdg/autostart/sm.puri.Calls.desktop"
 	fi
 }
 
