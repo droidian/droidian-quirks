@@ -19,3 +19,10 @@ Pre-Depends: calls, ofono
 Depends: ${misc:Depends}
 Description: Calls app's config for ofono plugin
  This package contains configuration files required to start "Calls" on ofono backend
+
+Package: hybris-mobian-quirks-hybris-gl
+Architecture: all
+Depends: ${misc:Depends}
+Description: Various quirks to make GL apps happy
+ This package contains various quirks required to make some
+ GL apps properly working.
