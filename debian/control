@@ -15,7 +15,7 @@ Description: remount / rw
 
 Package: hybris-mobian-quirks-calls-config-ofono
 Architecture: all
-Pre-Depends: calls, ofono
+Pre-Depends: gnome-calls, ofono
 Depends: ${misc:Depends}
 Description: Calls app's config for ofono plugin
  This package contains configuration files required to start "Calls" on ofono backend
