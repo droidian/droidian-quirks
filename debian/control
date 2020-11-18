@@ -10,8 +10,12 @@ Vcs-Git: https://github.com/hybris-mobian-releng/hybris-mobian-quirks.git
 Package: hybris-mobian-quirks-remount-root-rw
 Architecture: all
 Depends: ${misc:Depends}
-Description: remount / rw
- This package contains systemd units required to remount / as read/write on generic halium-boot
+Description: Remount / as rw via (dirty) systemd unit.
+
+Package: hybris-mobian-quirks-writable-image
+Architecture: all
+Depends: ${misc:Depends}
+Description: Dotfile required to mount rootfs as rw on halium based adaptations
 
 Package: hybris-mobian-quirks-calls-config-ofono
 Architecture: all
