@@ -30,3 +30,9 @@ Depends: ${misc:Depends}
 Description: Various quirks to make GL apps happy
  This package contains various quirks required to make some
  GL apps properly working.
+
+Package: hybris-mobian-quirks-qt-force-gles
+Architecture: all
+Depends: ${misc:Depends}
+Description: Package pin for libqt5gui5 and libqt5quick5
+ Disallow installation of libqt5gui5 and libqt5quick5, so that APT will fallback to libqt5gui5-gles and libqt5quick5-gles instead.
