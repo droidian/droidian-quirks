@@ -1,6 +1,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: hybris-mobian-quirks
-Source: https://github.com/hybris-mobian/hybris-mobian-quirks
+Upstream-Name: droidian-quirks
+Source: https://github.com/droidian/droidian-quirks
 
 Files: *
 Copyright: 2020 Giuseppe "r3vn" Corti <giuseppe.corti@protonmail.com>

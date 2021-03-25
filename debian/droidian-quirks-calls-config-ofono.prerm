@@ -6,7 +6,7 @@ remove() {
 	# Restore Calls daemon config
 	if [ -e "/usr/lib/calls-config-ofono/sm.puri.Calls-daemon.desktop.mm" ]; then
 		rm -f "/etc/xdg/autostart/sm.puri.Calls-daemon.desktop"
-		dpkg-divert --rename --package hybris-mobian-quirks-calls-config-ofono --divert "/usr/lib/calls-config-ofono/sm.puri.Calls-daemon.desktop.mm" --remove "/etc/xdg/autostart/sm.puri.Calls-daemon.desktop"
+		dpkg-divert --rename --package droidian-quirks-calls-config-ofono --divert "/usr/lib/calls-config-ofono/sm.puri.Calls-daemon.desktop.mm" --remove "/etc/xdg/autostart/sm.puri.Calls-daemon.desktop"
 	fi
 }
 
