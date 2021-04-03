@@ -47,6 +47,26 @@ Replaces: hybris-mobian-quirks-qt-force-gles (<< 10+git20210325000000)
 Description: Package pin for libqt5gui5 and libqt5quick5
  Disallow installation of libqt5gui5 and libqt5quick5, so that APT will fallback to libqt5gui5-gles and libqt5quick5-gles instead.
 
+Package: droidian-quirks-journald-standard
+Architecture: all
+Pre-Depends: systemd
+Depends: ${misc:Depends}
+Conflicts: droidian-quirks-journald-development
+Provides: droidian-quirks-journald
+Description: Journald configuration for standard Droidian installations
+ This package provides the journald configuration for standard
+ (non-development) Droidian installations.
+
+Package: droidian-quirks-journald-development  
+Architecture: all
+Pre-Depends: systemd
+Depends: ${misc:Depends}
+Conflicts: droidian-quirks-journald-standard
+Provides: droidian-quirks-journald
+Description: Journald configuration for development Droidian installations
+ This package provides the journald configuration for development
+ Droidian installations.
+
 Package: hybris-mobian-quirks-remount-rw
 Architecture: all
 Depends: droidian-quirks-remount-root-rw

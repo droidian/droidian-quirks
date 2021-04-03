@@ -1,0 +1,1 @@
+journald/10-journald-volatile.conf /usr/lib/systemd/journald.conf.d/
