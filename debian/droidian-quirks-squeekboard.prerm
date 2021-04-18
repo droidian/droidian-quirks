@@ -1,0 +1,17 @@
+#!/bin/sh
+set -e
+
+remove() {
+
+	# Restore squeekboard light theme
+	if [ -e "/usr/lib/quirks-squeekboard/sm.puri.OSK0.desktop.light" ]; then
+		rm -f "/usr/share/applications/sm.puri.OSK0.desktop"
+		dpkg-divert --rename --package droidian-quirks-squeekboard --divert "/usr/lib/quirks-squeekboard/sm.puri.OSK0.desktop.light" --remove "/usr/share/applications/sm.puri.OSK0.desktop"
+	fi
+}
+
+case "$1" in
+	"remove")
+		remove
+		;;
+esac

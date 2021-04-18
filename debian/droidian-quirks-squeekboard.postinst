@@ -1,0 +1,17 @@
+#!/bin/sh
+set -e
+
+configure() {
+	# Divert squeekboard .desktop
+	if ! [ -e "/usr/lib/quirks-squeekboard/sm.puri.OSK0.desktop.light" ]; then
+		dpkg-divert --rename --package droidian-quirks-squeekboard --divert "/usr/lib/quirks-squeekboard/sm.puri.OSK0.desktop.light" --add "/usr/share/applications/sm.puri.OSK0.desktop"
+		ln -s "/usr/lib/quirks-squeekboard/sm.puri.OSK0.desktop.dark" "/usr/share/applications/sm.puri.OSK0.desktop"
+	fi
+
+}
+
+case "$1" in
+	"configure")
+		configure
+		;;
+esac

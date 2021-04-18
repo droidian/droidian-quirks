@@ -7,6 +7,12 @@ Standards-Version: 4.5.0.3
 Vcs-Browser: https://github.com/droidian/droidian-quirks
 Vcs-Git: https://github.com/droidian-releng/droidian-quirks.git
 
+Package: droidian-quirks-squeekboard
+Architecture: all
+Depends: ${misc:Depends}
+Description: Set squeekboard dark theme
+  This package contains a desktop entry to start squeekboard-restyled instead of squeekboard
+
 Package: droidian-quirks-remount-root-rw
 Architecture: all
 Depends: ${misc:Depends}
