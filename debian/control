@@ -12,6 +12,7 @@ Architecture: all
 Depends: ${misc:Depends}
 Description: Set squeekboard dark theme
   This package contains a desktop entry to start squeekboard-restyled instead of squeekboard
+Conflicts: mobian-tweaks-common
 
 Package: droidian-quirks-remount-root-rw
 Architecture: all
