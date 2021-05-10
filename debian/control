@@ -80,6 +80,15 @@ Description: Journald configuration for development Droidian installations
  This package provides the journald configuration for development
  Droidian installations.
 
+Package: droidian-quirks-wlan-wcnss
+Architecture: all
+Pre-Depends: systemd
+Depends: ${misc:Depends},
+         halium-wrappers,
+Description: Quirks to enable WLAN on devices with qcom prima
+ This package provides quirks to allow WLAN to be enabled on
+ qcom prima devices.
+
 Package: hybris-mobian-quirks-remount-rw
 Architecture: all
 Depends: droidian-quirks-remount-root-rw

@@ -1,0 +1,15 @@
+[Unit]
+Description=Enables WLAN on devices with Prima
+Requires=lxc@android.service
+After=lxc@android.service
+ConditionPathExists=/dev/wcnss_wlan
+
+[Service]
+Type=oneshot
+ExecStartPre=/usr/bin/waitforservice init.svc.wcnss-service
+ExecStart=/usr/bin/droidian-wcnss-enable.sh
+
+[Install]
+# FIXME: multi-user.target is not the right target for this, but
+# we're bound on the lxc container's target.
+WantedBy=multi-user.target
