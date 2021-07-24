@@ -1,0 +1,15 @@
+[Unit]
+Description=Enables WLAN on devices with boot_wlan
+Before=lxc@android.service
+Requires=android-mount.service
+After=android-mount.service
+ConditionPathExists=/sys/kernel/boot_wlan/boot_wlan
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/droidian-boot-wlan.sh
+
+[Install]
+# FIXME: multi-user.target is not the right target for this, but
+# we're bound on the lxc container's target.
+WantedBy=multi-user.target

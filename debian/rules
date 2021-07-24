@@ -4,4 +4,5 @@
 	dh $@
 
 override_dh_installsystemd:
-	dh_installsystemd --name=droidian-wcnss-enable
+	dh_installsystemd --no-start --name=droidian-wcnss-enable
+	dh_installsystemd --no-start --name=droidian-boot-wlan
