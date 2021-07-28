@@ -8,6 +8,11 @@ configure() {
 		ln -s "/usr/lib/calls-config-ofono/sm.puri.Calls-daemon.desktop.ofono" "/etc/xdg/autostart/sm.puri.Calls-daemon.desktop"
 	fi
 
+	# Divert Calls application config
+	if ! [ -e "/usr/lib/calls-config-ofono/sm.puri.Calls.desktop.mm" ]; then
+		dpkg-divert --rename --package droidian-quirks-calls-config-ofono --divert "/usr/lib/calls-config-ofono/sm.puri.Calls.desktop.mm" --add "/usr/share/applications/sm.puri.Calls.desktop"
+		ln -s "/usr/lib/calls-config-ofono/sm.puri.Calls.desktop.ofono" "/usr/share/applications/sm.puri.Calls.desktop"
+	fi
 }
 
 case "$1" in
