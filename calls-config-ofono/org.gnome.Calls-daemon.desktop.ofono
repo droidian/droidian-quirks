@@ -12,7 +12,7 @@ Comment=A phone dialer and call handler (daemon mode)
 Keywords[uk]=Telephone;Call;Phone;Dial;Dialer;PSTN;телефон;виклик;дзвінок;набір;набирання;
 Keywords=Telephone;Call;Phone;Dial;Dialer;PSTN;
 # Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-Icon=sm.puri.Calls
+Icon=org.gnome.Calls
 TryExec=gnome-calls
 Exec=gnome-calls -p ofono --daemon
 Type=Application

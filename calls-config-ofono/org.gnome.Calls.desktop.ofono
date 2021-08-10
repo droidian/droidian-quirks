@@ -58,7 +58,7 @@ Keywords[tr]=Telefon;Arama;Ara;Çağrı;Çevir;Tuşla;Çevirici;Tuşlayıcı;Ara
 Keywords[uk]=Telephone;Call;Phone;Dial;Dialer;PSTN;телефон;виклик;дзвінок;набір;набирання;
 Keywords=Telephone;Call;Phone;Dial;Dialer;PSTN;
 # Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-Icon=sm.puri.Calls
+Icon=org.gnome.Calls
 TryExec=gnome-calls
 Exec=gnome-calls %u -p ofono
 Type=Application

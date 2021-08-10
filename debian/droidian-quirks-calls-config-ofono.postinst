@@ -3,15 +3,15 @@ set -e
 
 configure() {
 	# Divert Calls daemon config
-	if ! [ -e "/usr/lib/calls-config-ofono/sm.puri.Calls-daemon.desktop.mm" ]; then
-		dpkg-divert --rename --package droidian-quirks-calls-config-ofono --divert "/usr/lib/calls-config-ofono/sm.puri.Calls-daemon.desktop.mm" --add "/etc/xdg/autostart/sm.puri.Calls-daemon.desktop"
-		ln -s "/usr/lib/calls-config-ofono/sm.puri.Calls-daemon.desktop.ofono" "/etc/xdg/autostart/sm.puri.Calls-daemon.desktop"
+	if ! [ -e "/usr/lib/calls-config-ofono/org.gnome.Calls-daemon.desktop.mm" ]; then
+		dpkg-divert --rename --package droidian-quirks-calls-config-ofono --divert "/usr/lib/calls-config-ofono/org.gnome.Calls-daemon.desktop.mm" --add "/etc/xdg/autostart/org.gnome.Calls-daemon.desktop"
+		ln -s "/usr/lib/calls-config-ofono/org.gnome.Calls-daemon.desktop.ofono" "/etc/xdg/autostart/org.gnome.Calls-daemon.desktop"
 	fi
 
 	# Divert Calls application config
-	if ! [ -e "/usr/lib/calls-config-ofono/sm.puri.Calls.desktop.mm" ]; then
-		dpkg-divert --rename --package droidian-quirks-calls-config-ofono --divert "/usr/lib/calls-config-ofono/sm.puri.Calls.desktop.mm" --add "/usr/share/applications/sm.puri.Calls.desktop"
-		ln -s "/usr/lib/calls-config-ofono/sm.puri.Calls.desktop.ofono" "/usr/share/applications/sm.puri.Calls.desktop"
+	if ! [ -e "/usr/lib/calls-config-ofono/org.gnome.Calls.desktop.mm" ]; then
+		dpkg-divert --rename --package droidian-quirks-calls-config-ofono --divert "/usr/lib/calls-config-ofono/org.gnome.Calls.desktop.mm" --add "/usr/share/applications/org.gnome.Calls.desktop"
+		ln -s "/usr/lib/calls-config-ofono/org.gnome.Calls.desktop.ofono" "/usr/share/applications/org.gnome.Calls.desktop"
 	fi
 }
 
