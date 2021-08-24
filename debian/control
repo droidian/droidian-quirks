@@ -92,6 +92,12 @@ Description: Various quirks to enable device features at boot
  WLAN). You can safely leave this package installed -- if there is nothing
  to enable, the unit files will be skipped.
 
+Package: droidian-quirks-tls-padding
+Architecture: all
+Depends: libtls-padding0
+Description: Quirk to preload libtls-padding
+ This package provides a quirk to allow preloading libtls-padding.
+
 Package: droidian-quirks-wlan-wcnss
 Architecture: all
 Pre-Depends: systemd
