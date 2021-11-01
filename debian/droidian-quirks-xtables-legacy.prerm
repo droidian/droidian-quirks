@@ -1,0 +1,14 @@
+#!/bin/bash
+set -e
+
+remove() {
+	for alt in iptables ip6tables; do
+		update-alternatives --auto ${alt}
+	done
+}
+
+case "$1" in
+	"remove")
+		remove
+		;;
+esac

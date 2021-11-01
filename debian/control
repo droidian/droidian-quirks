@@ -99,6 +99,13 @@ Depends: libtls-padding0
 Description: Quirk to preload libtls-padding
  This package provides a quirk to allow preloading libtls-padding.
 
+Package: droidian-quirks-xtables-legacy
+Architecture: all
+Pre-Depends: iptables
+Description: Quirk to set xtables-legacy as the default iptables implementation
+ This package provides a quirk that sets xtables-legacy as the
+ default iptables implementation.
+
 Package: droidian-quirks-wlan-wcnss
 Architecture: all
 Pre-Depends: systemd

@@ -1,0 +1,14 @@
+#!/bin/bash
+set -e
+
+configure() {
+	for alt in iptables ip6tables; do
+		update-alternatives --set ${alt} /usr/sbin/${alt}-legacy
+	done
+}
+
+case "$1" in
+	"configure")
+		configure
+		;;
+esac
