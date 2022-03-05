@@ -105,3 +105,24 @@ Pre-Depends: iptables
 Description: Quirk to set xtables-legacy as the default iptables implementation
  This package provides a quirk that sets xtables-legacy as the
  default iptables implementation.
+
+Package: droidian-quirks-api28
+Architecture: all
+Depends: libgbinder
+Description: Various generic quirks for API 28 (P) devices
+ This package contains various generic quirks for adaptations
+ based on Android API 28 (P).
+
+Package: droidian-quirks-api29
+Architecture: all
+Depends: libgbinder
+Description: Various generic quirks for API 29 (Q) devices
+ This package contains various generic quirks for adaptations
+ based on Android API 29 (Q).
+
+Package: droidian-quirks-api30
+Architecture: all
+Depends: libgbinder
+Description: Various generic quirks for API 30 (R) devices
+ This package contains various generic quirks for adaptations
+ based on Android API 30 (R).
