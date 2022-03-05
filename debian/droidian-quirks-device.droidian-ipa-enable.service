@@ -1,0 +1,15 @@
+[Unit]
+Description=Enables IPA
+Before=lxc@android.service
+Requires=android-mount.service
+After=android-mount.service
+ConditionPathExists=/vendor/firmware/ipa_fws.mdt
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/droidian-ipa-enable.sh
+
+[Install]
+# FIXME: multi-user.target is not the right target for this, but
+# we're bound on the lxc container's target.
+WantedBy=multi-user.target

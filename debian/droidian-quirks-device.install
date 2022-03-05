@@ -1,2 +1,3 @@
 device/droidian-wcnss-enable.sh /usr/bin
 device/droidian-boot-wlan.sh /usr/bin
+device/droidian-ipa-enable.sh /usr/bin
