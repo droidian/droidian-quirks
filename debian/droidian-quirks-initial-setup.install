@@ -1,0 +1,2 @@
+initial-setup/vendor.conf /etc/gnome-initial-setup/
+initial-setup/systemd/* /usr/lib/systemd/

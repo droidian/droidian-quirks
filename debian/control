@@ -106,6 +106,13 @@ Description: Quirk to set xtables-legacy as the default iptables implementation
  This package provides a quirk that sets xtables-legacy as the
  default iptables implementation.
 
+Package: droidian-quirks-initial-setup
+Architecture: all
+Pre-Depends: gnome-initial-setup
+Description: Quirk to configure the initial setup wizard
+ This package provides a quirk that configures the initial
+ setup wizard.
+
 Package: droidian-quirks-api28
 Architecture: all
 Depends: libgbinder
