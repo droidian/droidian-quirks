@@ -1,0 +1,11 @@
+[Unit]
+Description=Regenerates SSH keys at first boot
+Before=ssh.service
+ConditionPathExists=!/etc/ssh/droidian-keys-regenerated
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/droidian-regenerate-ssh-keys.sh
+
+[Install]
+WantedBy=multi-user.target ssh.service
