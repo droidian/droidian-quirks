@@ -1,9 +1,10 @@
 [Unit]
-Description=Enables WLAN on devices with boot_wlan
-Before=lxc@android.service
-Requires=android-mount.service
-After=android-mount.service
-ConditionPathExists=/sys/kernel/boot_wlan/boot_wlan
+Description=Enables WLAN on boot
+Requires=lxc@android.service
+After=lxc@android.service
+ConditionPathExists=|/sys/kernel/boot_wlan/boot_wlan
+ConditionPathExists=|/dev/wlan
+ConditionPathExists=|/dev/wmtWifi
 
 [Service]
 Type=oneshot
