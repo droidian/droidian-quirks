@@ -120,6 +120,13 @@ Description: Quirk to regenerate host SSH keys at first boot
  This package provides a quirk that allows to regenerate
  host SSH keys at the first boot.
 
+Package: droidian-quirks-hostname
+Architecture: all
+Pre-Depends: runonce
+Description: Quirk to set hostname at first boot
+ This package provides a quirk that sets the device hostname
+ at first boot.
+
 Package: droidian-quirks-api28
 Architecture: all
 Depends: libgbinder

@@ -1,0 +1,3 @@
+hostname/script/hostname /usr/share/runonce/scripts/
+hostname/target/hostname /usr/share/runonce/targets/
+hostname/10-order.conf   /usr/lib/systemd/system/runonce@hostname.service.d/
