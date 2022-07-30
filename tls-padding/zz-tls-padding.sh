@@ -12,4 +12,6 @@ case "${LD_PRELOAD}" in
 		;;
 esac
 
-export LD_PRELOAD="${LIBRARY}${LD_PRELOAD}"
+if [ "${UID}" != "0" ]; then
+	export LD_PRELOAD="${LIBRARY}${LD_PRELOAD}"
+fi
