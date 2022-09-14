@@ -1,0 +1,4 @@
+brightness/script/brightness-bootstrap /usr/share/runonce/scripts/
+brightness/target/brightness-bootstrap /usr/share/runonce/targets/
+brightness/droidian-save-brightness.sh /usr/share/droidian-quirks/brightness/
+brightness/systemd-backlight@.service  /usr/lib/systemd/system/

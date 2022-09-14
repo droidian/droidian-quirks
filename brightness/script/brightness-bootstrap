@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+# Bootstraps the default brightness level
+
+set -e
+
+# FIXME: be smarter
+BACKLIGHT_CANDIDATES="backlight:panel0-backlight leds:lcd-backlight"
+
+for candidate in ${BACKLIGHT_CANDIDATES}; do
+	subsystem=$(echo ${candidate} | cut -d':' -f1)
+	device=$(echo ${candidate} | cut -d':' -f2)
+
+	if [ ! -e "/sys/class/${subsystem}/${device}" ]; then
+		continue
+	fi
+
+	/usr/share/droidian-quirks/brightness/droidian-save-brightness.sh bootstrap ${candidate}
+
+	systemctl enable systemd-backlight@${candidate}
+	systemctl daemon-reload
+	break
+done

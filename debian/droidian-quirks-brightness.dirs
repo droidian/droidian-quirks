@@ -1,0 +1,4 @@
+/usr/share/runonce/scripts/
+/usr/share/runonce/targets/
+/usr/share/droidian-quirks/brightness/
+/etc/systemd/system/
