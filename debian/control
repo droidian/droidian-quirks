@@ -16,8 +16,8 @@ Conflicts: mobile-tweaks-common
 Package: droidian-quirks-squeekboard
 Architecture: all
 Depends: ${misc:Depends}
-Description: Set squeekboard dark theme
-  This package contains a desktop entry to start squeekboard-restyled instead of squeekboard
+Description: Set squeekboard dark theme (deprecated package)
+ This package is empty, you can safely remove it.
 Conflicts: mobian-tweaks-common
 
 Package: droidian-quirks-remount-root-rw

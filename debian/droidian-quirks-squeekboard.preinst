@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-remove() {
+upgrade() {
 
 	# Restore squeekboard light theme
 	if [ -e "/usr/lib/quirks-squeekboard/sm.puri.OSK0.desktop.light" ]; then
@@ -11,7 +11,7 @@ remove() {
 }
 
 case "$1" in
-	"remove")
-		remove
+	"upgrade")
+		upgrade
 		;;
 esac
