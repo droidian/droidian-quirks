@@ -18,6 +18,7 @@ Conflicts=shutdown.target
 After=lxc@android.service android-service@hwcomposer.service droidian_boot_completed.service
 Requires=droidian_boot_completed.service
 Before=shutdown.target
+ConditionPathExists=!/system-update
 
 [Service]
 Type=oneshot
