@@ -1,1 +1,2 @@
 quirks-29/gbinder.d/* /etc/gbinder.d/
+quirks-29/apt/* /usr/share/droidian-quirks/apispecific/apt/

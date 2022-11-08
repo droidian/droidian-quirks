@@ -1,3 +1,4 @@
 quirks-30/gbinder.d/* /etc/gbinder.d/
 quirks-30/droid-vendor-overlay/* /usr/lib/droid-vendor-overlay/
 quirks-30/systemd/* /usr/lib/systemd/system/
+quirks-30/apt/* /usr/share/droidian-quirks/apispecific/apt/

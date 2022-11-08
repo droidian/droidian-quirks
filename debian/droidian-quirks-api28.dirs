@@ -1,1 +1,3 @@
+/etc/apt/preferences.d
 /etc/gbinder.d/
+/usr/share/droidian-quirks/apispecific/apt/
