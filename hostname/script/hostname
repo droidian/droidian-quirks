@@ -11,7 +11,7 @@ ANDROID_VENDOR_PROPS="/vendor/build.prop"
 if [ -e "${PREFERRED_HOSTNAME_FILE}" ]; then
 	new_hostname="$(cat ${PREFERRED_HOSTNAME_FILE})"
 elif [ -e "${ANDROID_VENDOR_PROPS}" ]; then
-	new_hostname="$(grep ro.product.vendor.model= ${ANDROID_VENDOR_PROPS} | cut -d'=' -f2)"
+	new_hostname="$(grep ro.product.vendor.device= ${ANDROID_VENDOR_PROPS} | cut -d'=' -f2)"
 fi
 
 [ -n "${new_hostname}" ] || exit 1
