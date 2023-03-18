@@ -26,4 +26,4 @@ fi
 # This can be removed in future once we move away on bookworm
 [ "$(hostnamectl hostname)" == "droidian" ] || exit 0
 
-hostnamectl hostname ${new_hostname}
+hostnamectl hostname "${new_hostname}"
