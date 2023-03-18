@@ -5,12 +5,17 @@
 
 set -e
 
-PREFERRED_HOSTNAME_FILE="/var/lib/droidian/preferred_hostname"
+PREFERRED_HOSTNAME_FILES="/usr/lib/droidian/device/preferred-hostname /var/lib/droidian/preferred_hostname"
 ANDROID_VENDOR_PROPS="/vendor/build.prop"
 
-if [ -e "${PREFERRED_HOSTNAME_FILE}" ]; then
-	new_hostname="$(cat ${PREFERRED_HOSTNAME_FILE})"
-elif [ -e "${ANDROID_VENDOR_PROPS}" ]; then
+for file in ${PREFERRED_HOSTNAME_FILES}; do
+	if [ -e "${file}" ]; then
+		new_hostname="$(cat ${file})"
+		break
+	fi
+done
+
+if [ -z "${new_hostname}" ] && [ -e "${ANDROID_VENDOR_PROPS}" ]; then
 	new_hostname="$(grep ro.product.vendor.model= ${ANDROID_VENDOR_PROPS} | cut -d'=' -f2)"
 fi
 
