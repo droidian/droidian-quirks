@@ -1,0 +1,14 @@
+# Thanks to Guido Gunther:
+# https://source.puri.sm/Librem5/librem5-base/-/commit/2849cd6dcfdf264e0ba7ca20457a47f72b7a2987
+
+@include common-auth
+auth    optional        pam_gnome_keyring.so
+
+@include common-account
+@include common-password
+
+session optional        pam_keyinit.so force revoke
+session required        pam_limits.so
+session required        pam_env.so readenv=1
+session required        pam_env.so readenv=1 envfile=/etc/default/locale
+@include common-session

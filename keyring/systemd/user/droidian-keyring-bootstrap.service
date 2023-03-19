@@ -1,0 +1,9 @@
+[Unit]
+Description=Droidian keyring bootstrap
+ConditionPathExists=!%E/gnome-initial-setup-done
+
+[Service]
+Type=forking
+StandardError=journal
+ExecStart=/usr/bin/droidian-keyring-bootstrap.sh
+Restart=on-failure

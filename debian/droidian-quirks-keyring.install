@@ -1,0 +1,5 @@
+keyring/runonce/script/keyring-bootstrap /usr/share/runonce/scripts/
+keyring/runonce/target/keyring-bootstrap /usr/share/runonce/targets/
+keyring/droidian-keyring-bootstrap.sh /usr/bin/
+keyring/pam.d/phosh /etc/pam.d/phosh
+keyring/systemd/* /usr/lib/systemd

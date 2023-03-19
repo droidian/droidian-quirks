@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+
+configure() {
+	runonce-queue keyring-bootstrap
+}
+
+case "$1" in
+	"configure")
+		configure
+		;;
+esac

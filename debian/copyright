@@ -3,11 +3,17 @@ Upstream-Name: droidian-quirks
 Source: https://github.com/droidian/droidian-quirks
 
 Files: *
-Copyright: 2020 Giuseppe "r3vn" Corti <giuseppe.corti@protonmail.com>
+Copyright: 2020-2023 Giuseppe "r3vn" Corti <giuseppe.corti@protonmail.com>
+           2020-2023 Eugenio "g7" Paolantonio <me@medesimo.eu>
 License: BSD-3-clause
 
+Files: keyrings/pam.d/*
+Copyright: 2018 Guido Günther <agx@sigxcpu.org>
+License: GPL-3+
+
 Files: debian/*
-Copyright: 2020 Giuseppe "r3vn" Corti <giuseppe.corti@protonmail.com>
+Copyright: 2020-2023 Giuseppe "r3vn" Corti <giuseppe.corti@protonmail.com>
+           2020-2023 Eugenio "g7" Paolantonio <me@medesimo.eu>
 License: BSD-3-clause
 
 License: BSD-3-clause
@@ -33,3 +39,19 @@ License: BSD-3-clause
  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+License: GPL-3+
+ This package is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 3 of the License, or
+ (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <https://www.gnu.org/licenses/>
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License version 3 can be found in "/usr/share/common-licenses/GPL-3".

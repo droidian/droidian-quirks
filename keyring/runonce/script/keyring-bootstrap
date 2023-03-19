@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Do not bother on older installations
+if [ -e "/home/droidian/.local/share/keyrings" ]; then
+	exit 0
+fi
+
+mkdir -p "/run/systemd/user/gnome-initial-setup-first-login.service.wants"
+ln -s "/usr/lib/systemd/user/droidian-keyring-bootstrap.service" "/run/systemd/user/gnome-initial-setup-first-login.service.wants/droidian-keyring-bootstrap.service"
+
+systemctl daemon-reload
