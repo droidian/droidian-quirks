@@ -108,7 +108,8 @@ Description: Quirk to set xtables-legacy as the default iptables implementation
 
 Package: droidian-quirks-initial-setup
 Architecture: all
-Pre-Depends: gnome-initial-setup
+Pre-Depends: gnome-initial-setup, runonce
+Depends: phosh-tour
 Description: Quirk to configure the initial setup wizard
  This package provides a quirk that configures the initial
  setup wizard.

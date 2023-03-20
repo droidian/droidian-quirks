@@ -1,2 +1,4 @@
 /etc/gnome-initial-setup/
 /usr/lib/systemd/
+/usr/share/runonce/scripts/
+/usr/share/runonce/targets/

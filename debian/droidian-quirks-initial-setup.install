@@ -1,2 +1,4 @@
 initial-setup/vendor.conf /etc/gnome-initial-setup/
 initial-setup/systemd/* /usr/lib/systemd/
+initial-setup/runonce/script/phosh-tour /usr/share/runonce/scripts/
+initial-setup/runonce/target/phosh-tour /usr/share/runonce/targets/

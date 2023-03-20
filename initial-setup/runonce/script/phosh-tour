@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Do not bother on older installations (this test is a bit flaky)
+if [ -e "/home/droidian/.local/share/keyrings" ]; then
+	touch /home/droidian/.config/phosh-tour-done
+	chown droidian:droidian /home/droidian/.config/phosh-tour-done
+	exit 0
+fi
+
+mkdir -p "/run/systemd/user/gnome-session-manager.target.wants"
+ln -s "/usr/lib/systemd/user/phosh-tour.service" "/run/systemd/user/gnome-session-manager.target.wants/phosh-tour.service"
+
+systemctl daemon-reload

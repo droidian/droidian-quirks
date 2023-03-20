@@ -1,0 +1,12 @@
+[Unit]
+Description=Launches phosh-tour
+After=phosh.service
+Requires=phosh.service
+ConditionPathExists=%E/gnome-initial-setup-done
+ConditionPathExists=!%E/phosh-tour-done
+
+[Service]
+Type=oneshot
+# Workaround until libhybris is fixed
+ExecStart=/bin/sh -c '/usr/bin/phosh-tour || true'
+ExecStartPost=/usr/bin/touch %E/phosh-tour-done
