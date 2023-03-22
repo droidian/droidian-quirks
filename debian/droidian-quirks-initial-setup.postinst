@@ -4,6 +4,7 @@ set -e
 configure() {
 	# Pointless for now
 	#runonce-queue phosh-tour
+	return 0
 }
 
 case "$1" in
