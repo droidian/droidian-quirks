@@ -2,7 +2,8 @@
 set -e
 
 configure() {
-	runonce-queue phosh-tour
+	# Pointless for now
+	#runonce-queue phosh-tour
 }
 
 case "$1" in
