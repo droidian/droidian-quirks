@@ -25,9 +25,9 @@ else
 fi
 
 target_path="${SYSTEMD_STORAGE}/${target_name}"
+mkdir -p ${SYSTEMD_STORAGE}
 
 if [ "${ACTION}" == "save" ] && [ -e "${device_path}/brightness" ]; then
-	mkdir -p ${SYSTEMD_STORAGE}
 	cat ${device_path}/brightness > "${target_path}"
 elif [ "${ACTION}" == "bootstrap" ] && [ -e "${device_path}/max_brightness" ]; then
 	echo "$(($(cat ${device_path}/max_brightness)/2))" > "${target_path}"
