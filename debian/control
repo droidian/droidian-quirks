@@ -163,3 +163,9 @@ Depends: libgbinder
 Description: Various generic quirks for API 30 (R) devices
  This package contains various generic quirks for adaptations
  based on Android API 30 (R).
+
+Package: droidian-quirks-totem-dummy
+Architecture: all
+Provides: totem
+Description: Quirk to provide a dummy totem
+ This package provides a dummy totem
