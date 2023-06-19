@@ -5,7 +5,7 @@ Priority: optional
 Build-Depends: debhelper (>= 10)
 Standards-Version: 4.5.0.3
 Vcs-Browser: https://github.com/droidian/droidian-quirks
-Vcs-Git: https://github.com/droidian-releng/droidian-quirks.git
+Vcs-Git: https://github.com/droidian/droidian-quirks.git
 
 Package: droidian-quirks-wayland
 Architecture: all
@@ -33,6 +33,11 @@ Depends: ${misc:Depends}
 Breaks: hybris-mobian-quirks-writable-image (<< 10+git20210325000000)
 Replaces: hybris-mobian-quirks-writable-image (<< 10+git20210325000000)
 Description: Dotfile required to mount rootfs as rw on halium based adaptations
+
+Package: droidian-quirks-full-resize
+Architecture: all
+Depends: ${misc:Depends}
+Description: Dotfile required to resize the rootfs to the size of userdata
 
 Package: droidian-quirks-calls-config-ofono
 Architecture: all
