@@ -172,6 +172,5 @@ Description: Various generic quirks for API 30 (R) devices
 Package: droidian-quirks-totem-dummy
 Architecture: all
 Provides: totem-plugins
-Conflicts: totem
 Description: Quirk to provide a dummy totem-plugins
  This package provides a dummy totem-plugins
