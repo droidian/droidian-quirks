@@ -174,3 +174,8 @@ Architecture: all
 Provides: totem-plugins
 Description: Quirk to provide a dummy totem-plugins
  This package provides a dummy totem-plugins
+
+Package: droidian-quirks-pwquality
+Architecture: all
+Description: Quirk to loosen password quality requirements
+ This package loosens password quality requirements
