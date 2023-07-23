@@ -175,6 +175,12 @@ Provides: totem-plugins
 Description: Quirk to provide a dummy totem-plugins
  This package provides a dummy totem-plugins
 
+Package: droidian-quirks-lollypop-dummy
+Architecture: all
+Provides: lollypop
+Description: Quirk to provide a dummy lollypop
+ This package provides a dummy lollypop
+
 Package: droidian-quirks-pwquality
 Architecture: all
 Description: Quirk to loosen password quality requirements
