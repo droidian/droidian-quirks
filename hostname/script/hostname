@@ -21,9 +21,8 @@ fi
 
 [ -n "${new_hostname}" ] || exit 1
 
-# TODO: since runonce/runonce@hostname came late in the bookworm cycle,
-# rename only installations still called 'droidian'...
-# This can be removed in future once we move away on bookworm
-[ "$(hostnamectl hostname)" == "droidian" ] || exit 0
+old_hostname="$(hostnamectl hostname)"
+
+sed -i "s/${old_hostname}/${new_hostname}/g" /etc/hosts
 
 hostnamectl hostname "${new_hostname}"
