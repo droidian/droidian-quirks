@@ -169,6 +169,13 @@ Description: Various generic quirks for API 30 (R) devices
  This package contains various generic quirks for adaptations
  based on Android API 30 (R).
 
+Package: droidian-quirks-api32
+Architecture: all
+Depends: libgbinder
+Description: Various generic quirks for API 32 (R) devices
+ This package contains various generic quirks for adaptations
+ based on Android API 32 (R).
+
 Package: droidian-quirks-totem-dummy
 Architecture: all
 Provides: totem-plugins
