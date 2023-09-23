@@ -1,0 +1,7 @@
+Package: waydroid-vendor-33
+Pin: release o=Droidian
+Pin-Priority: 1003
+
+Package: waydroid-vendor-*
+Pin: release o=Droidian
+Pin-Priority: -1

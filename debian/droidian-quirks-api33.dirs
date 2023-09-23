@@ -1,0 +1,5 @@
+/etc/apt/preferences.d
+/etc/gbinder.d/
+/usr/lib/droid-vendor-overlay/
+/usr/lib/systemd/system/
+/usr/share/droidian-quirks/apispecific/apt/
