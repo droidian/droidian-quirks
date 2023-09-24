@@ -148,6 +148,13 @@ Description: Quirk to bootstrap and properly save brightness level
  This package provides a quirk that bootstraps and makes systemd
  properly save the brightness level.
 
+Package: droidian-quirks-firefox
+Architecture: all
+Pre-Depends: firefox-esr | firefox
+Description: Various quirks and Droidian-specific settings for firefox
+ This package provides various quirks and Droidian-specific settings
+ for Mozilla Firefox.
+
 Package: droidian-quirks-api28
 Architecture: all
 Depends: libgbinder
