@@ -155,6 +155,12 @@ Description: Various quirks and Droidian-specific settings for firefox
  This package provides various quirks and Droidian-specific settings
  for Mozilla Firefox.
 
+Package: droidian-quirks-waydroid
+Architecture: all
+Description: Various quirks for the Droidian flavour of Waydroid
+ This package provides various quriks for the Droidian flavour
+ of Waydroid.
+
 Package: droidian-quirks-api28
 Architecture: all
 Depends: libgbinder

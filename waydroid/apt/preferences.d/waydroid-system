@@ -1,0 +1,11 @@
+# Droidian provides some empty packages to satisfy
+# dpkg and install custom downloaded Waydroid images.
+#
+# This feature is disabled by default, you can remove
+# or comment the block here to allow installing the
+# waydroid-system-custom and waydroid-vendor-custom
+# packages.
+
+Package: waydroid-system-custom waydroid-vendor-custom
+Pin: release o=Droidian
+Pin-Priority: -1
