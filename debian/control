@@ -212,3 +212,8 @@ Package: droidian-quirks-pwquality
 Architecture: all
 Description: Quirk to loosen password quality requirements
  This package loosens password quality requirements
+
+Package: droidian-quirks-gnome
+Architecture: all
+Depends: ${misc:Depends}
+Description: Various gnome variables
