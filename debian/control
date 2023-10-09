@@ -217,3 +217,8 @@ Package: droidian-quirks-gnome
 Architecture: all
 Depends: ${misc:Depends}
 Description: Various gnome variables
+
+Package: droidian-quirks-systemd
+Architecture: all
+Depends: ${misc:Depends}
+Description: Various systemd quirks
