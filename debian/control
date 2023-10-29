@@ -222,3 +222,10 @@ Package: droidian-quirks-systemd
 Architecture: all
 Depends: ${misc:Depends}
 Description: Various systemd quirks
+
+Package: droidian-quirks-devtools
+Architecture: all
+Depends: ${misc:Depends}
+Description: Devtools specific quirks for Droidian
+ This package contains some devtools-specific quirks for
+ Droidian installations.
