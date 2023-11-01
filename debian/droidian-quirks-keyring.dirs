@@ -3,3 +3,4 @@
 /usr/bin
 /etc/pam.d
 /usr/lib/systemd
+/usr/lib/droidian/quirks/keyring/

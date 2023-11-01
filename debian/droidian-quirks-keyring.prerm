@@ -1,30 +1,28 @@
 #!/bin/sh
 set -e
 
-disable_keyring() {
+enable_keyring() {
 	component="${1}"
 	source="/etc/xdg/autostart/gnome-keyring-${component}.desktop"
 	diversion="/usr/lib/droidian/quirks/keyring/gnome-keyring-${component}.desktop"
 
-	if [ ! -e "${diversion}" ] && [ -e "${source}" ]; then
+	if [ -e "${diversion}" ] && [ ! -e "${source}" ]; then
 		dpkg-divert \
 			--rename \
 			--package droidian-quirks-keyring \
 			--divert "${diversion}" \
-			--add "${source}"
+			--remove "${source}"
 	fi
 }
 
 configure() {
-	runonce-queue keyring-bootstrap
-
-	disable_keyring pkcs11
-	disable_keyring secrets
-	disable_keyring ssh
+	enable_keyring pkcs11
+	enable_keyring secrets
+	enable_keyring ssh
 }
 
 case "$1" in
-	"configure")
-		configure
+	"remove")
+		remove
 		;;
 esac

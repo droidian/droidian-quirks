@@ -135,8 +135,8 @@ Description: Quirk to set hostname at first boot
 
 Package: droidian-quirks-keyring
 Architecture: all
-Pre-Depends: runonce
-Depends: gnome-keyring
+Pre-Depends: runonce,
+             gnome-keyring
 Description: Quirk to create a keyring at first boot
  This package provides a quirk that creates a keyring at
  first boot.
