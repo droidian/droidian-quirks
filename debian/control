@@ -230,3 +230,17 @@ Depends: ${misc:Depends}
 Description: Devtools specific quirks for Droidian
  This package contains some devtools-specific quirks for
  Droidian installations.
+
+Package: droidian-quirks-dummy-ofono2mm
+Provides: ofono2mm
+Architecture: all
+Depends: ${misc:Depends}
+Description: Quirk to provide a dummy ofono2mm
+ This package provides a dummy ofono2mm
+
+Package: droidian-quirks-dummy-modemmanager
+Provides: modemmanager
+Architecture: all
+Depends: ${misc:Depends}
+Description: Quirk to provide a dummy modemmanager
+ This package provides a dummy modemmanager
