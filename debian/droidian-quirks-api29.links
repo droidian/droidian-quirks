@@ -1,3 +1,5 @@
 /usr/share/droidian-quirks/apispecific/apt/preferences.d/waydroid-vendor /etc/apt/preferences.d/waydroid-vendor
 /apex/com.android.runtime/lib/libandroidicu.so /usr/lib/droid-vendor-overlay/lib/libandroidicu.so
 /apex/com.android.runtime/lib64/libandroidicu.so /usr/lib/droid-vendor-overlay/lib64/libandroidicu.so
+/vendor/lib64/egl/eglSubDriverAndroid.so /usr/lib/droid-vendor-overlay/lib64/eglSubDriverAndroid.so
+/vendor/lib/egl/eglSubDriverAndroid.so /usr/lib/droid-vendor-overlay/lib/eglSubDriverAndroid.so
