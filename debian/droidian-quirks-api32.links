@@ -5,3 +5,5 @@
 /vendor/lib/egl/eglSubDriverAndroid.so /usr/lib/droid-vendor-overlay/lib/eglSubDriverAndroid.so
 /apex/com.android.i18n/lib/libicu.so /usr/lib/droid-vendor-overlay/lib/libicu.so
 /apex/com.android.i18n/lib64/libicu.so /usr/lib/droid-vendor-overlay/lib64/libicu.so
+/apex/com.android.media/lib/libmediaformatshaper.so /usr/lib/droid-vendor-overlay/lib/libmediaformatshaper.so
+/apex/com.android.media/lib64/libmediaformatshaper.so /usr/lib/droid-vendor-overlay/lib64/libmediaformatshaper.so
