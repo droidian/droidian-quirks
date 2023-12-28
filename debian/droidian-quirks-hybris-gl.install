@@ -1,1 +1,2 @@
 hybris-gl/zz-droidian.sh /etc/profile.d
+hybris-gl/zz-gles-shader-cache.sh /etc/profile.d
