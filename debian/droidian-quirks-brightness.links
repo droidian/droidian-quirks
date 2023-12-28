@@ -1,0 +1,1 @@
+/usr/share/droidian-quirks/brightness/systemd-backlight@.service /etc/systemd/system/systemd-backlight@.service

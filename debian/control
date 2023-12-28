@@ -144,7 +144,7 @@ Description: Quirk to create a keyring at first boot
 
 Package: droidian-quirks-brightness
 Architecture: all
-Pre-Depends: runonce
+Pre-Depends: runonce, systemd (>= 255)
 Description: Quirk to bootstrap and properly save brightness level
  This package provides a quirk that bootstraps and makes systemd
  properly save the brightness level.
