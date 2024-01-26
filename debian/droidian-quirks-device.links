@@ -1,3 +1,4 @@
 /dev/null /etc/systemd/system/apparmor.service
 /dev/null /etc/systemd/user/pipewire-pulse.service
 /dev/null /etc/systemd/user/pipewire-pulse.socket
+/dev/null /etc/systemd/system/power-profiles-daemon.service
