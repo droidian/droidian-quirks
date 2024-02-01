@@ -1,5 +1,5 @@
-# Disallow installation of libqt5gui5 and libqt5quick5, so that APT will fallback
-# to libqt5gui5-gles and libqt5quick5-gles instead.
-Package: libqt5gui5 libqt5quick5
+# Disallow installation of libqt5gui5, libqt5quick5 and libqt6gui6, so that APT will fallback
+# to libqt5gui5-gles, libqt5quick5-gles and libqt6gui6-gles instead.
+Package: libqt5gui5 libqt5quick5 libqt6gui6
 Pin: version *
 Pin-Priority: -1
