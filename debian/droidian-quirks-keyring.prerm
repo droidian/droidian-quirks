@@ -23,6 +23,6 @@ configure() {
 
 case "$1" in
 	"remove")
-		remove
+		configure
 		;;
 esac
