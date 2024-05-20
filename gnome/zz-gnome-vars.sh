@@ -8,3 +8,6 @@ export XDG_MENU_PREFIX="gnome-"
 # make qt apps more gnome/gtk like
 export QT_QPA_PLATFORMTHEME='gnome'
 export QT_STYLE_OVERRIDE=adwaita
+
+# Force the old GSK renderer
+export GSK_RENDERER=gl
