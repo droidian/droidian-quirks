@@ -3,3 +3,4 @@ device/droidian-boot-wlan.sh /usr/bin
 device/droidian-ipa-enable.sh /usr/bin
 device/droidian-lmk-disable.sh /usr/bin
 device/systemd-drop-ins/lxc.service.d/* /usr/lib/systemd/system/lxc.service.d
+device/tmpfiles.d/* /usr/lib/tmpfiles.d/
