@@ -4,6 +4,9 @@
 
 [ -e /dev/wlan ] && echo ON > /dev/wlan
 
-[ -e /dev/wmtWifi ] && echo 1 > /dev/wmtWifi
+if [ -e /dev/wmtWifi ]; then
+	sleep 3
+	echo 1 > /dev/wmtWifi
+fi
 
 exit 0
