@@ -1,7 +1,7 @@
 [Unit]
 Description=Enables WLAN on boot
-Requires=lxc@android.service
-After=lxc@android.service
+Requires=android_boot_completed.service
+After=android_boot_completed.service
 ConditionPathExists=|/sys/kernel/boot_wlan/boot_wlan
 ConditionPathExists=|/dev/wlan
 ConditionPathExists=|/dev/wmtWifi
