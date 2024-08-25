@@ -1,0 +1,7 @@
+[Path]
+PathExists=/dev/wmtWifi
+
+[Install]
+# FIXME: multi-user.target is not the right target for this, but
+# we're bound on the lxc container's target.
+WantedBy=multi-user.target
