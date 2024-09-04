@@ -1,1 +1,3 @@
-/usr/lib/firefox-esr/defaults/pref
+/usr/lib/firefox/defaults/pref
+/usr/share/runonce/scripts
+/usr/share/runonce/targets

@@ -1,0 +1,13 @@
+#!/bin/sh
+set -e
+
+configure() {
+	runonce-queue firefox-esr-migration
+	runonce-queue firefox-esr-remove
+}
+
+case "$1" in
+	"configure")
+		configure
+		;;
+esac

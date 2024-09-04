@@ -1,0 +1,4 @@
+#!/bin/bash
+
+apt --purge -y remove firefox-esr
+dpkg --purge firefox-esr-mobile-config
