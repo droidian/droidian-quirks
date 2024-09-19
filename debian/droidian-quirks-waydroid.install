@@ -1,1 +1,5 @@
 waydroid/apt/preferences.d/waydroid-system /etc/apt/preferences.d
+waydroid/systemd/waydroid-mount-shared-folders.service /usr/lib/systemd/user
+waydroid/bin/waydroid-mount-shared /usr/bin
+waydroid/bin/waydroid-umount-shared /usr/bin
+waydroid/polkit/91-waydroid.rules /usr/share/polkit-1/rules.d

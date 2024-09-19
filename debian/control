@@ -158,6 +158,7 @@ Description: Various quirks and Droidian-specific settings for firefox
 
 Package: droidian-quirks-waydroid
 Architecture: all
+Depends: bindfs
 Description: Various quirks for the Droidian flavour of Waydroid
  This package provides various quriks for the Droidian flavour
  of Waydroid.

@@ -1,0 +1,17 @@
+#!/bin/pkexec /bin/bash
+# vim: expandtab ft=bash
+
+set -Eeuo pipefail
+
+USERNAME=$(id -un ${PKEXEC_UID})
+GROUP=$(id -gn ${PKEXEC_UID})
+
+waydroid_mount() {
+    /usr/bin/bindfs -u ${USERNAME} -g ${GROUP} -p 770 -o nonempty $@
+}
+
+mkdir -p /home/${USERNAME}/Waydroid /home/${USERNAME}/.local/share/waydroid/data/media/0/Droidian
+chown ${USERNAME}: /home/${USERNAME}/Waydroid
+chown 1023:android_media_rw /home/${USERNAME}/.local/share/waydroid/data/media/0/Droidian
+
+waydroid_mount /home/${USERNAME}/.local/share/waydroid/data/media/0/Droidian /home/${USERNAME}/Waydroid

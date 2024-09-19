@@ -1,0 +1,12 @@
+[Unit]
+Description = Mount Waydroid shared folder
+ConditionPathExists = %h/.config/Droidian/waydroid_shared_folder
+
+[Service]
+Type=oneshot
+ExecStart = /usr/bin/waydroid-mount-shared
+RemainAfterExit=yes
+ExecStop = /usr/bin/waydroid-umount-shared
+
+[Install]
+WantedBy = default.target

@@ -1,1 +1,4 @@
 /etc/apt/preferences.d
+/usr/lib/systemd/user
+/usr/share/polkit-1/rules.d
+/usr/bin
