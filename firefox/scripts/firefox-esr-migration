@@ -1,0 +1,35 @@
+#!/bin/bash
+# Migrate Firefox ESR profile to Firefox
+# Set default browser to Firefox if needed
+# Update desktop file in Phosh favorites if needed
+
+export DISPLAY=:0
+
+if [[ ! -f ~/.mozilla/firefox/installs.ini || ! -f ~/.mozilla/firefox/profiles.ini ]]
+then
+	echo "Can't find any Firefox ESR profile"
+	exit 0
+fi
+
+# We rename current profile to droidian and update Firefox configuration
+if ! grep 4F96D1932A9F858E ~/.mozilla/firefox/profiles.ini >/dev/null
+then
+	profile=$(grep -A 2 3B6073811A6ABF12 ~/.mozilla/firefox/installs.ini | grep -Po 'Default=\K.*')
+	profile_name=$(grep -B 2 "${profile}" ~/.mozilla/firefox/profiles.ini | grep -Po 'Name=\K.*')
+	mv ~/.mozilla/firefox/"${profile}" ~/.mozilla/firefox/droidian
+	sed -i "s/\[3B6073811A6ABF12\]/\[4F96D1932A9F858E\]/g" ~/.mozilla/firefox/installs.ini
+	sed -i "s/Default=${profile}/Default=droidian/g" ~/.mozilla/firefox/installs.ini
+	sed -i "s/\[Install3B6073811A6ABF12\]/\[Install4F96D1932A9F858E\]/g" ~/.mozilla/firefox/profiles.ini
+	sed -i "s/Path=${profile}/Path=droidian/g" ~/.mozilla/firefox/profiles.ini
+	sed -i "s/Default=${profile}/Default=droidian/g" ~/.mozilla/firefox/profiles.ini
+	sed -i "s/Name=${profile_name}/Name=droidian/g" ~/.mozilla/firefox/profiles.ini
+fi
+
+# Update default browser
+if [[ -e ~/.config/mimeapps.list ]]
+then
+	sed -i 's/firefox-esr/firefox/g' ~/.config/mimeapps.list
+fi
+
+# Update phosh dock
+gsettings set sm.puri.phosh favorites "$(gsettings get sm.puri.phosh favorites | sed 's/firefox-esr/firefox/g')"

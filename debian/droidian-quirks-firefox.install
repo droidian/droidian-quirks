@@ -1,1 +1,4 @@
-firefox/*.js /usr/lib/firefox-esr/defaults/pref/
+firefox/*.js /usr/lib/firefox/defaults/pref/
+firefox/scripts/firefox-esr-migration /usr/share/runonce/scripts/
+firefox/scripts/firefox-esr-remove /usr/share/runonce/scripts/
+firefox/targets/firefox-esr-migration /usr/share/runonce/targets/
