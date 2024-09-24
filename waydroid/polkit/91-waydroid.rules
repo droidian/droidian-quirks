@@ -1,0 +1,8 @@
+polkit.addRule(function(action, subject) {
+    if (action.id == "org.freedesktop.policykit.exec" &&
+        action.lookup("program") == "/bin/bash") {
+        if (action.lookup("command_line").match("^/bin/bash /usr/bin/waydroid-(mount|umount)-shared$")) {
+            return polkit.Result.YES;
+        }
+    }
+});

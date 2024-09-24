@@ -1,0 +1,8 @@
+#!/bin/pkexec /bin/bash
+# vim: expandtab ft=bash
+
+set -Eeuo pipefail
+
+USERNAME=$(id -un ${PKEXEC_UID})
+
+umount /home/${USERNAME}/Waydroid
