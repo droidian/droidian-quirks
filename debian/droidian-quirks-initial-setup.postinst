@@ -4,6 +4,7 @@ set -e
 configure() {
 	# Pointless for now
 	#runonce-queue phosh-tour
+	runonce-queue gis-setup
 	return 0
 }
 

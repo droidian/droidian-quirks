@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if ! grep -q handset /etc/machine-info; then
+	echo "Not running ${0}, not an handset."
+	exit 0
+fi
+
+mkdir -p /run/systemd/user/gnome-initial-setup-first-login.service.d
+
+cat > /run/systemd/user/gnome-initial-setup-first-login.service.d/90-handset.conf <<EOF
+[Service]
+Environment=GIS_SMALL_SCREEN=1
+EOF
+
+exit 0
