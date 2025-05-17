@@ -1,4 +1,4 @@
-Package: waydroid-vendor-31
+Package: waydroid-vendor-31 waydroid-vendor-31 waydroid-vendor-33
 Pin: release o=Droidian
 Pin-Priority: 1003
 
