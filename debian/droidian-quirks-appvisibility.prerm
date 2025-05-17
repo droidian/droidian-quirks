@@ -1,0 +1,26 @@
+#!/bin/sh
+set -e
+
+#APPVISIBILITYAPPS#
+
+remove() {
+	for app in ${APPS}; do
+		fullpath="/usr/share/applications/$app.desktop"
+		if dpkg-statoverride --list ${fullpath} &> /dev/null; then
+			dpkg-statoverride \
+				--remove \
+				${fullpath}
+
+			if [ -e ${fullpath} ]; then
+				chown root:root ${fullpath}
+				chmod 644 ${fullpath}
+			fi
+		fi
+	done
+}
+
+case "$1" in
+	"remove")
+		remove
+		;;
+esac

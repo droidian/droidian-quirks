@@ -166,6 +166,12 @@ Architecture: all
 Depends: plasma-mobile-wf-config-hwcomposer
 Description: Quirk to install necessary env vars for plasma-mobile-wf.
 
+Package: droidian-quirks-appvisibility
+Architecture: all
+Description: Quirk to hide applications
+ This package provides a quirk to hide applications unwanted in
+ the App Drawers.
+
 Package: droidian-quirks-api28
 Architecture: all
 Depends: libgbinder

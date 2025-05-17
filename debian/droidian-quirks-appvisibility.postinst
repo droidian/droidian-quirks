@@ -1,0 +1,25 @@
+#!/bin/sh
+set -e
+
+#APPVISIBILITYAPPS#
+
+configure() {
+	for app in ${APPS}; do
+		fullpath="/usr/share/applications/$app.desktop"
+		if ! dpkg-statoverride --list ${fullpath} &> /dev/null; then
+			dpkg-statoverride \
+				--add \
+				--update \
+				root \
+				root \
+				1130 \
+				${fullpath}
+		fi
+	done
+}
+
+case "$1" in
+	"configure")
+		configure
+		;;
+esac
