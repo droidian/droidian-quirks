@@ -150,6 +150,17 @@ Description: Quirk to create a keyring at first boot
 Package: droidian-quirks-firefox
 Architecture: all
 Pre-Depends: firefox-esr | firefox
+Provides: droidian-quirks-firefox-provider
+Conflicts: droidian-quirks-firefox-provider
+Description: Various quirks and Droidian-specific settings for firefox
+ This package provides various quirks and Droidian-specific settings
+ for Mozilla Firefox.
+
+Package: droidian-quirks-firefox-gpu
+Architecture: all
+Pre-Depends: firefox-esr | firefox
+Provides: droidian-quirks-firefox-provider
+Conflicts: droidian-quirks-firefox-provider
 Description: Various quirks and Droidian-specific settings for firefox
  This package provides various quirks and Droidian-specific settings
  for Mozilla Firefox.
