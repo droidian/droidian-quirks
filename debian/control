@@ -159,8 +159,7 @@ Description: Various quirks and Droidian-specific settings for firefox
 Package: droidian-quirks-firefox-gpu
 Architecture: all
 Pre-Depends: firefox-esr | firefox
-Provides: droidian-quirks-firefox-provider
-Conflicts: droidian-quirks-firefox-provider
+Depends: droidian-quirks-firefox
 Description: Various quirks and Droidian-specific settings for firefox
  This package provides various quirks and Droidian-specific settings
  for Mozilla Firefox.
