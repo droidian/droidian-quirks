@@ -18,3 +18,7 @@ pref("layers.acceleration.disabled", false);
 pref('layers.acceleration.force-enabled', true);
 pref('layers.gpu-process.enabled', true);
 pref('layers.gpu-process.force-enabled', true);
+
+// enable hw WebGL
+pref("webgl.forbid-hardware", false);
+pref("webgl.forbid-software", true);
